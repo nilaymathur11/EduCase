@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Merienda&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <main>
+        <section class="header">
+            <div class="logo">
+                <img src="images/1174949_js_react js_logo_react_react native_icon.png" alt="">
+            </div>
+            <div class="head_cont">
+                SOME RANDOM TEXT,SOME RANDOM <br>
+                TEXT, RANDOM TEXT,SOME RANDOM TEXT
+            </div>
+        </section>
+        <section class="middle">
+            <div class="middle_top">
+                <div class="middle_top_left" id="login" onclick="display_left()">
+                    Login
+                </div>
+                <div class="middle_top_right" id="signup" onclick="display_right()">
+                    Signup
+                </div>
+            </div>
+            <div class="middle_bottom">
+                <div class="middle_bottom_1">
+                    <div id="login_page">
+                        <form>
+                            <input type="email" name="email" placeholder="Email Address" id="email">
+                            <input type="password" name="password" placeholder="Password" id="pass">
+                            <input type="submit" value="Login" id="submit">
+                        </form>
+                    </div>
+                    <div id="signup_page">
+                        <form>
+                            <input type="email" name="email" placeholder="Email Address" id="email">
+                            <input type="password" name="password" placeholder="Password" id="pass">
+                            <input type="password" name="password" placeholder="Confirm Password" id="pass">
+                            <input type="submit" value="Register" id="submit">
+                        </form>
+                    </div>
+                </div>
+                <div class="middle_bottom_2">
+                    forgot password?
+                </div>
+                <div class="middle_bottom_3">
+                    or login with
+                </div>
+                <div class="middle_bottom_4">
+                    <a href=""><img src="images/icons8-google-48.png" alt="" class="login_icon"></a>
+                    <a href=""><img src="images/icons8-facebook-48.png" alt="" class="login_icon"></a>
+                    <a href=""><img src="images/icons8-twitter-48.png" alt="" class="login_icon"></a>
+                </div>
+                <div class="middle_bottom_5">
+                    <span class="acc">don't have an account?</span>
+                    <span>create new now!</span>
+                </div>
+                <div class="middle_bottom_6">
+                    <span>by signing up you agree with our</span>
+                    <span class="pink">terms & conditions</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+
+    var sign = document.getElementById('signup');
+    var login = document.getElementById('login');
+    var signpage = document.getElementById('signup_page');
+    var loginpage = document.getElementById('login_page');
+
+    function display_right() {
+        sign.style.borderBottom = '4px solid #e70b89';
+        login.style.borderBottom = 'none';
+        loginpage.style.display = 'none';
+        signpage.style.display = 'block';
+    }
+    function display_left() {
+        sign.style.borderBottom = 'none';
+        login.style.borderBottom = '4px solid #e70b89';
+        signpage.style.display = 'none';
+        loginpage.style.display = 'block';
+    }
+
+</script>
+
+</html>
